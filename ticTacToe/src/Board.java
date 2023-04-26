@@ -9,8 +9,10 @@ public class Board {
 	//2D array of ROWS-by-COLS Cell instances
 	Cell [][] cells;
 	
-	/** Constructor to create the game board */
-	public Board() {
+	/** Constructor to create the game board 
+	 * @param cols 
+	 * @param rows */
+	public Board(int rows, int cols) {
 		
 	 //initialise the cells array using ROWS and COLS constants 
 		cells = new Cell[GameMain.ROWS][GameMain.COLS];
