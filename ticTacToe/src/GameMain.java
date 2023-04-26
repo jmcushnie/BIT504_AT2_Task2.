@@ -55,10 +55,10 @@ public class GameMain extends JPanel implements MouseListener{
 		setPreferredSize(new Dimension(CANVAS_WIDTH, CANVAS_HEIGHT + 30));
 		
 		
-		// TODO: Create a new instance of the game "Board"class. HINT check the variables above for the correct name
+		//Create a new instance of the game "Board"class.
 		board = new Board(ROWS, COLS);
 		
-		//TODO: call the method to initialise the game board
+		//Initialise the game board
 		initGame();
 	}
 	
@@ -69,12 +69,13 @@ public class GameMain extends JPanel implements MouseListener{
 				//create a main window to contain the panel
 				JFrame frame = new JFrame(TITLE);
 				
-				//TODO: create the new GameMain panel and add it to the frame
-						
+				//create the new GameMain panel and add to the frame
+				GameMain gamePanel = new GameMain();
+	            frame.getContentPane().add(gamePanel);	
 				
 				
-				//TODO: set the default close operation of the frame to exit_on_close
-		            
+				//set default close operation of the frame
+	            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
 				
 				frame.pack();             
 				frame.setLocationRelativeTo(null);
